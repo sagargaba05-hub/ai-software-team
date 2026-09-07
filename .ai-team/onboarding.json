@@ -1,0 +1,20 @@
+{
+  "languages": [
+    "Python"
+  ],
+  "frameworks": [
+    "langgraph"
+  ],
+  "commands": {
+    "build": [],
+    "test": [
+      "python -m pytest"
+    ],
+    "lint": []
+  },
+  "security_areas": [
+    "docs/SECURITY.md",
+    ".ai-team/security/.gitkeep",
+    "sample-project/docs/SECURITY.md"
+  ]
+}

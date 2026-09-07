@@ -1,0 +1,9 @@
+version: 1
+capabilities:
+  coding: {model: "ollama/qwen3-coder:30b", class: LOCAL}
+  reasoning: {model: "ollama/gpt-oss:20b", class: LOCAL}
+  review: {model: "ollama/gpt-oss:20b", class: LOCAL}
+premium:
+  enabled_by_default: false
+  maximum_calls_per_run: 3
+  repair_attempts_before_decision: 3

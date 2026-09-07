@@ -1,0 +1,98 @@
+﻿[
+  {
+    "name": "git",
+    "status": "PASS",
+    "detail": "git version 2.54.0.windows.1",
+    "required": true,
+    "timestamp": "2026-09-06T09:39:33.557606+00:00",
+    "ok": true
+  },
+  {
+    "name": "python>=3.11",
+    "status": "PASS",
+    "detail": "3.14.4",
+    "required": true,
+    "timestamp": "2026-09-06T09:39:33.557629+00:00",
+    "ok": true
+  },
+  {
+    "name": "role-contracts",
+    "status": "PASS",
+    "detail": "9 valid role mappings and project contracts",
+    "required": true,
+    "timestamp": "2026-09-06T09:39:33.563854+00:00",
+    "ok": true
+  },
+  {
+    "name": "write-permission",
+    "status": "PASS",
+    "detail": "C:\\Users\\sagar\\Desktop\\AI tools\\ai-software-team",
+    "required": true,
+    "timestamp": "2026-09-06T09:39:33.564301+00:00",
+    "ok": true
+  },
+  {
+    "name": "ollama-runtime",
+    "status": "PASS",
+    "detail": "6 models detected",
+    "required": true,
+    "timestamp": "2026-09-06T09:39:33.621584+00:00",
+    "ok": true
+  },
+  {
+    "name": "model:qwen3-coder:30b",
+    "status": "AVAILABLE",
+    "detail": "available",
+    "required": true,
+    "timestamp": "2026-09-06T09:39:33.621600+00:00",
+    "ok": true
+  },
+  {
+    "name": "model:gpt-oss:20b",
+    "status": "AVAILABLE",
+    "detail": "available",
+    "required": true,
+    "timestamp": "2026-09-06T09:39:33.621603+00:00",
+    "ok": true
+  },
+  {
+    "name": "omniroute-api",
+    "status": "PASS",
+    "detail": "HTTP 200; 501 advertised models",
+    "required": true,
+    "timestamp": "2026-09-06T09:39:34.427705+00:00",
+    "ok": true
+  },
+  {
+    "name": "provider-discovery",
+    "status": "AVAILABLE",
+    "detail": "15 classified; local_eligible=True",
+    "required": false,
+    "timestamp": "2026-09-06T09:39:34.427859+00:00",
+    "ok": true
+  },
+  {
+    "name": "route:developer",
+    "status": "PASS",
+    "detail": "requested=ollama/qwen3-coder:30b; returned=qwen3-coder:30b; nonempty=True",
+    "required": true,
+    "timestamp": "2026-09-06T09:39:54.405201+00:00",
+    "ok": true
+  },
+  {
+    "name": "route:reviewer",
+    "status": "PASS",
+    "detail": "requested=ollama/gpt-oss:20b; returned=gpt-oss:20b; nonempty=True",
+    "required": true,
+    "timestamp": "2026-09-06T09:40:10.226555+00:00",
+    "ok": true
+  },
+  {
+    "name": "codex-configuration",
+    "status": "NOT_CONFIGURED",
+    "detail": "disabled by policy",
+    "required": false,
+    "timestamp": "2026-09-06T09:40:10.227127+00:00",
+    "ok": false
+  }
+]

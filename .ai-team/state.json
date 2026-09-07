@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "run_id": "13c37a49-ce8b-4e49-b86f-688d24ebd2dd",
+  "repository": "C:\\Users\\sagar\\Desktop\\AI tools\\ai-software-team",
+  "objective": "Analyze project structure and identify missing files or tests",
+  "work_kind": "feature",
+  "plan": [
+    "inspect",
+    "architect",
+    "developer",
+    "tester",
+    "reviewer",
+    "documentation",
+    "final_gate"
+  ],
+  "stage": "complete",
+  "status": "BLOCKED",
+  "completed": [
+    "inspect"
+  ],
+  "retry_count": 0,
+  "finding_attempts": {},
+  "codex_calls": 0,
+  "premium_reservations": 0,
+  "qa_status": "NOT_RUN",
+  "review_status": "NOT_RUN",
+  "security_status": "NOT_REQUIRED",
+  "documentation_status": "NOT_RUN",
+  "release_status": "NOT_RUN",
+  "findings": "architect failed: Malformed or failed role output",
+  "review_target": "developer",
+  "evidence": {
+    "run_id": "13c37a49-ce8b-4e49-b86f-688d24ebd2dd",
+    "mode": "LIVE"
+  },
+  "repository_limitations": [
+    "repository has no base commit",
+    "repository has no origin"
+  ],
+  "updated_at": "2026-09-07T06:18:57.312006+00:00"
+}

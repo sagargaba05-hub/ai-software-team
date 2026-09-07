@@ -1,0 +1,11 @@
+version: 1
+roles:
+  orchestrator: {responsibility: coordinate stages, entry: validated objective, output: persisted plan, preferred: reasoning, fallback: none, escalation: policy only, complete: terminal state recorded}
+  architect: {responsibility: architecture decisions, entry: scoped feature or architectural finding, output: implementation contract, preferred: reasoning, fallback: local reasoning, escalation: eligible high-impact decision, complete: decisions testable}
+  developer: {responsibility: smallest correct implementation, entry: approved contract, output: code and tests, preferred: coding, fallback: local coding, escalation: after bounded repair, complete: targeted checks pass}
+  debugger: {responsibility: reproduce and isolate defects, entry: bugfix scope, output: cause and reproduction evidence, preferred: coding, fallback: local reasoning, escalation: severe unexplained defect, complete: cause evidenced}
+  reviewer: {responsibility: independent implementation assessment, entry: tested implementation, output: severity findings with owner, preferred: review, fallback: local reasoning, escalation: material disagreement, complete: no open blocker or high}
+  tester: {responsibility: executable behavior verification, entry: implementation present, output: command evidence and findings, preferred: coding, fallback: local reasoning, escalation: after bounded repair, complete: required commands pass}
+  security_reviewer: {responsibility: security checklist and findings, entry: deterministic trigger, output: security result, preferred: review, fallback: local reasoning, escalation: high-risk security design, complete: no open blocker or high}
+  documentation: {responsibility: synchronize verified behavior, entry: tests and review complete, output: current documentation, preferred: coding, fallback: local reasoning, escalation: none, complete: complete or justified no change}
+  final_gate: {responsibility: deterministic evidence decision, entry: all applicable stages recorded, output: current release report, preferred: review, fallback: deterministic policy, escalation: eligible milestone only, complete: approved fail or blocked}

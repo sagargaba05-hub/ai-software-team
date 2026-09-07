@@ -1,0 +1,82 @@
+﻿[
+  {
+    "name": "git",
+    "status": "PASS",
+    "detail": "git version 2.54.0.windows.1",
+    "required": true,
+    "timestamp": "2026-09-06T09:30:36.905662+00:00",
+    "ok": true
+  },
+  {
+    "name": "python>=3.11",
+    "status": "PASS",
+    "detail": "3.14.4",
+    "required": true,
+    "timestamp": "2026-09-06T09:30:36.905683+00:00",
+    "ok": true
+  },
+  {
+    "name": "role-contracts",
+    "status": "PASS",
+    "detail": "9 valid role mappings and project contracts",
+    "required": true,
+    "timestamp": "2026-09-06T09:30:36.909700+00:00",
+    "ok": true
+  },
+  {
+    "name": "write-permission",
+    "status": "PASS",
+    "detail": "C:\\Users\\sagar\\Desktop\\AI tools\\ai-software-team",
+    "required": true,
+    "timestamp": "2026-09-06T09:30:36.910143+00:00",
+    "ok": true
+  },
+  {
+    "name": "ollama-runtime",
+    "status": "PASS",
+    "detail": "6 models detected",
+    "required": true,
+    "timestamp": "2026-09-06T09:30:36.941177+00:00",
+    "ok": true
+  },
+  {
+    "name": "model:qwen3-coder:30b",
+    "status": "AVAILABLE",
+    "detail": "available",
+    "required": true,
+    "timestamp": "2026-09-06T09:30:36.941192+00:00",
+    "ok": true
+  },
+  {
+    "name": "model:gpt-oss:20b",
+    "status": "AVAILABLE",
+    "detail": "available",
+    "required": true,
+    "timestamp": "2026-09-06T09:30:36.941195+00:00",
+    "ok": true
+  },
+  {
+    "name": "omniroute-api",
+    "status": "FAIL",
+    "detail": "API unavailable: HTTPError",
+    "required": true,
+    "timestamp": "2026-09-06T09:30:36.977892+00:00",
+    "ok": false
+  },
+  {
+    "name": "provider-discovery",
+    "status": "UNAVAILABLE",
+    "detail": "local core discovery unavailable",
+    "required": false,
+    "timestamp": "2026-09-06T09:30:36.977903+00:00",
+    "ok": false
+  },
+  {
+    "name": "codex-configuration",
+    "status": "NOT_CONFIGURED",
+    "detail": "disabled by policy",
+    "required": false,
+    "timestamp": "2026-09-06T09:30:36.978272+00:00",
+    "ok": false
+  }
+]

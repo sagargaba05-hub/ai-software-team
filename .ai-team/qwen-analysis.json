@@ -1,0 +1,13 @@
+{
+  "status": "BLOCKED",
+  "required_model": "ollama/qwen3-coder:30b",
+  "identity_probe": {
+    "timestamp_utc": "2026-09-06T09:07:05.338Z",
+    "requested_model": "ollama/qwen3-coder:30b",
+    "returned_model": "qwen3-coder:30b",
+    "http_status": 200,
+    "request_id": "1788685605718-9a5a13"
+  },
+  "analysis_result": "No substantive Qwen analysis was accepted. Bounded attempts were wrong-routed to gpt-oss:20b or timed out.",
+  "codex_calls": 0
+}

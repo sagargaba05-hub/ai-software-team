@@ -1,0 +1,40 @@
+﻿{
+  "status": "PASS",
+  "assertions": [
+    {
+      "name": "live-developer-route",
+      "status": "PASS",
+      "mode": "LIVE",
+      "timestamp": "2026-09-06T09:38:29.361914+00:00",
+      "detail": "returned=qwen3-coder:30b; nonempty=True"
+    },
+    {
+      "name": "live-reviewer-route",
+      "status": "PASS",
+      "mode": "LIVE",
+      "timestamp": "2026-09-06T09:38:45.672351+00:00",
+      "detail": "returned=gpt-oss:20b; nonempty=True"
+    },
+    {
+      "name": "simulated-premium-decision",
+      "status": "PASS",
+      "mode": "SIMULATED",
+      "timestamp": "2026-09-06T09:38:45.673980+00:00",
+      "detail": "outcome=SIMULATED_ELIGIBLE; subprocess=impossible"
+    },
+    {
+      "name": "routine-zero-codex",
+      "status": "PASS",
+      "mode": "SIMULATED",
+      "timestamp": "2026-09-06T09:38:45.673989+00:00",
+      "detail": "selections=0; reservations=0; attempts=0; calls=0"
+    },
+    {
+      "name": "disposable-cleanup",
+      "status": "PASS",
+      "mode": "LIVE",
+      "timestamp": "2026-09-06T09:38:45.674262+00:00",
+      "detail": "temporary repository removed"
+    }
+  ]
+}

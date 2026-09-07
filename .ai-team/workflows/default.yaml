@@ -1,0 +1,6 @@
+version: 1
+workflows:
+  feature: [inspect, architect, developer, tester, reviewer, security_decision, documentation, final_gate]
+  bugfix: [inspect, debugger, developer, tester, reviewer, security_decision, documentation, final_gate]
+  refactor: [inspect, developer, tester, reviewer, security_decision, documentation, final_gate]
+  review-only: [inspect, reviewer, security_decision, documentation, final_gate]
