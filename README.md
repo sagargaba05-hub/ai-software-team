@@ -41,16 +41,19 @@ For an offline control-flow check:
 
 ## Continue chat integration
 
-Continue can use OmniRoute as an OpenAI-compatible chat and Agent-mode model. The user-level Continue config at `C:\Users\sagar\.continue\config.yaml` points `OmniRoute Qwen Coder` to `http://127.0.0.1:20128/v1` and starts `python -m ai_team.mcp_server` over stdio.
+Continue can use OmniRoute as an OpenAI-compatible chat and Agent-mode model. The user-level Continue config at `C:\Users\sagar\.continue\config.yaml` points the single `OmniRoute AI Team Auto` model to `http://127.0.0.1:20128/v1` and starts `python -m ai_team.mcp_server` over stdio. Continue uses complete responses for this model and OmniRoute strips provider reasoning metadata before it reaches the chat.
 
-The MCP server exposes four tools:
+The MCP server exposes workspace-aware tools for:
 
-- `ai_team_doctor`
-- `ai_team_status`
-- `ai_team_run`
-- `ai_team_resume`
+- exact workspace identity and AI-team health;
+- repository search, safe file reading, and durable project context;
+- read-only GitHub connection status;
+- checked-in local Python/Node files, pytest, npm test/run scripts, and read-only Git commands; and
+- initializing, starting, resuming, inspecting, and demonstrating an AI-team run.
 
-Open any target repository in VS Code, reload the window after configuration changes, select `OmniRoute Qwen Coder`, and use Continue's Agent mode. Global Continue rules tell the agent when to use each team tool. The MCP tools require the agent to supply the current repository path explicitly, preventing an omitted path from silently targeting a different project. No project-local Continue configuration is required. OmniRoute must be running before model conversations or live team runs.
+Open any target repository as the VS Code workspace, reload the window after configuration changes, select `OmniRoute AI Team Auto`, and use Continue's Agent mode. The global MCP process is launched with that workspace as its working directory, so `repository="."` resolves to the open folder. The agent verifies this with `ai_team_workspace` before project work and searches the safe repository inventory before declaring a file missing. No project-local Continue configuration is required. OmniRoute must be running before model conversations or live team runs.
+
+Local execution is intentionally bounded: commands are passed directly to an allowlist without a shell; inline code, path escape, generated/dependency directories, and mutating Git commands are rejected. GitHub authentication can be inspected, but commits, pushes, merges, deployment, destructive operations, and arbitrary shell access remain human-authorized actions.
 
 ## Operating model
 

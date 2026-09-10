@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "expected_remote": "https://github.com/sagargaba05-hub/ai-software-team.git",
+  "git_admin_path": ".",
+  "base_branch": "master",
+  "worktree_root": ".ai-worktrees"
+}

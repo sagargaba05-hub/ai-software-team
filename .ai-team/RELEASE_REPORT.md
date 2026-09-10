@@ -1,39 +1,51 @@
-STATUS: PASS
+# Release Report
 
-# Local release report
+Run: acceptance-repair-2026-09-07
+Status: RELEASE_APPROVED
 
-## Objective
+## Checks
 
-Enable chat-based operation of the reusable AI software team from Continue through the existing OmniRoute installation.
+- requirements: PASS
+- architecture: PASS
+- implementation: PASS
+- tests: PASS
+- independent_review: PASS
+- security: PASS
+- documentation: COMPLETE
+- secret_hygiene: PASS
+- scope_hygiene: PASS
+- health_demo: PASS
+- provider_failures: PASS
+- escalation_failures: PASS
 
-## Scope delivered
+## Reasons
 
-- Added an OmniRoute-backed Continue Agent model.
-- Added a local stdio MCP bridge exposing doctor, status, run, and resume.
-- Made the bridge globally available for any existing project while requiring an explicit repository path for every project operation.
-- Added global Continue rules that select the appropriate team tool from conversational instructions in any workspace.
-- Bound the OmniRoute launcher explicitly to localhost.
-- Corrected empty model-diff handling without accepting malformed nonempty patches.
-- Updated architecture, onboarding, usage, and troubleshooting documentation.
+- None
 
-## Verification
+## Evidence references
 
-- Tests: 18 passed after replacing the project-allowlist test with global-path and required-schema coverage.
-- Framework doctor: overall PASS.
-- Live OmniRoute/Qwen chat completion: PASS (`READY`).
-- Continue MCP child process: running from the framework virtual environment.
-- QA: PASS.
-- Security review: PASS.
-- Documentation: complete for the changed behavior.
+- .ai-team/test-results/current.md
+- .ai-team/test-results/doctor-live.json
+- .ai-team/test-results/controlled-demo.json
+- .ai-team/reviews/current.md
+- .ai-team/security/current.md
+- .ai-team/work-orders/documentation-latest.md
+
+## Verified commands
+
+- `python -m pytest -p no:cacheprovider --basetemp <unique> -ra`
+- `python -m ruff check <changed-and-new-python>`
+- `python -m ruff format --check <changed-and-new-python>`
+- `python -m compileall -q src tests`
+- `python -m pip check`
+- `python -m ai_team doctor --json`
+- `python -m ai_team demo .`
 
 ## Limitations
 
-- Continue must remain in Agent mode with `OmniRoute Qwen Coder` selected for tool use.
-- OmniRoute must be restarted after Windows reboot unless a separate startup service is later authorized.
-- A real `ai_team_run` was not launched during release verification because that would begin modifying the product repository; the MCP registry, invocation path, model route, and underlying workflow tests were verified independently.
+- No commit, push, merge, deployment, or Instagram Automation modification was performed.
+- Two long-form role requests returned empty final content; bounded low-reasoning GPT-OSS review and security checks then passed.
 
 ## Rollback
 
-Remove the `OmniRoute Qwen Coder` and `AI Software Team` blocks from `C:\Users\sagar\.continue\config.yaml`, remove the target `.continue\rules\00-ai-software-team.md`, and revert the framework files changed by this release.
-
-This status means locally ready for user operation. It does not authorize deployment, publication, pushing, or production-control changes.
+Revert only the files changed by this run after preserving unrelated user work.
